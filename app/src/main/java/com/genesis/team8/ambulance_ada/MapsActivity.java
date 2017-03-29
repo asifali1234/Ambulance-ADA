@@ -344,7 +344,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         l.setYes("f");
         l.setLat("0");
         l.setLng("0");
-        Firebase ref = new Firebase("https://adaa-45b17.firebaseio.com/PreviousLocation/");
+        Firebase ref = new Firebase("https://ad-a-bc752.firebaseio.com/PreviousLocation/");
         ref.push().setValue(l);
 
         startActivity(intent);

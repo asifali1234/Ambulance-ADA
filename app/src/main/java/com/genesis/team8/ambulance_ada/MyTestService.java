@@ -27,7 +27,7 @@ public class MyTestService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         // Do the task here
         Firebase.setAndroidContext(this);
-        String url="https://adaa-45b17.firebaseio.com/PreviousLocation/";
+        String url="https://ad-a-bc752.firebaseio.com/PreviousLocation/";
         final Firebase ref = new Firebase(url);
       
 
@@ -70,8 +70,8 @@ public class MyTestService extends IntentService {
              double latitude = gps.getLatitude();
                     double longitude = gps.getLongitude();
 
-                        lat = Double.toString(10.01);
-                        lng = Double.toString(76.5);
+                        lat = Double.toString(latitude);
+                        lng = Double.toString(longitude);
                      } else {
 
                         gps.showSettingsAlert();
@@ -81,12 +81,14 @@ public class MyTestService extends IntentService {
 
         l.setLat(lat);
         l.setLng(lng);
-        Firebase ref = new Firebase("https://adaa-45b17.firebaseio.com/CurrentAmbulance/");
+        Firebase ref = new Firebase("https://ad-a-bc752.firebaseio.com/CurrentAmbulance/");
         ref.push().setValue(l);
 
     }
     private NotificationManager mNotificationManager;
     public static final int NOTIFICATION_ID = 1;
+
+
     private void sendNotification(String msg) {
         mNotificationManager = (NotificationManager)
                 this.getSystemService(Context.NOTIFICATION_SERVICE);

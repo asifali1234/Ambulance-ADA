@@ -51,7 +51,7 @@ scheduleAlarm();
     }
     public void read()
     {
-        final Firebase ref = new Firebase("https://adaa-45b17.firebaseio.com/PreviousLocation/");
+        final Firebase ref = new Firebase("https://ad-a-bc752.firebaseio.com/PreviousLocation/");
         //Value event listener for realtime data update
 
 
@@ -65,7 +65,7 @@ scheduleAlarm();
 
                     f = ord.getLng();
 
-fl=ord.getYes();
+                    fl=ord.getYes();
                 }
                 cal();
 
