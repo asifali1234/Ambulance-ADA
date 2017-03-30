@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         Firebase.setAndroidContext(this);
         read();
-scheduleAlarm();
+        scheduleAlarm();
     }
 
     public void scheduleAlarm() {
